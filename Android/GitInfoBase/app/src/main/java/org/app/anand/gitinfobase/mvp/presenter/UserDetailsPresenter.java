@@ -31,6 +31,8 @@ public class UserDetailsPresenter extends BasePresenter<UserDetailsView> impleme
         super(userDetailsView);
     }
 
+    //Communicates with UserActivity as Presenter component with RxJava driven validation
+    // and response for individual user detail
     public void getUserDetails(String username,GitApiService gitApiService) {
         getView().onShowDialog("Loading details for "+username+"...");
         Observable<User> currentUser = gitApiService.getUserDetails(username);

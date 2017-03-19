@@ -29,7 +29,9 @@ public class UserPresenter extends BasePresenter<HomeView>  {
         Log.d(TAG, "UserPresenter: " + v);
     }
 
-    public void getFollowers(String username,GitApiService gitApiService) {
+    //Communicates with HomeActivity as Presenter component with RxJava driven validation
+    // and response for individual user detail
+    public void getFollowers(final String username, GitApiService gitApiService) {
         getView().onShowDialog("Loading followers....");
         Call<List<User>> userResponseObservable = gitApiService.getFollowers(username);
 
@@ -41,15 +43,15 @@ public class UserPresenter extends BasePresenter<HomeView>  {
                 if(response.body()!=null)
                 {
                     getView().onUserLoaded(response.body());
-                    getView().onShowToast("Total followers:"+response.body().size());
+                    getView().onShowToast("Total followers:"+response.body().size()+"");
                 } else {
-                    getView().onShowToast("Error : No followers found");
+                    getView().onShowToast("Error : No followers found.");
                 }
             }
 
             @Override
             public void onFailure(Call<List<User>> call, Throwable t) {
-
+                getView().onShowToast("Error:Failed to fetch followers for "+username+".");
             }
         });
     }

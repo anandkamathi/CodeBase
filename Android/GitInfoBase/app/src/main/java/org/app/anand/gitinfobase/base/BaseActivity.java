@@ -39,7 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity{
 
     @CallSuper
     protected void onViewReady(Bundle savedInstanceState, Intent intent) {
-        //To be used by child activities
+
     }
 
 

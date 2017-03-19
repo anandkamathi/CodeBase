@@ -19,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by anand on 3/18/17.
  */
-
+//NetModule provides Retrofit singleton object with association of NetComponent
 @Module
 public class NetModule {
     String mBaseUrl;

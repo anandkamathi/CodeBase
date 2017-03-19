@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GitInfobase</string>
+    <string name="screen_title">GitInfoBase provides GitHub users\' details</string>
+    <string name="hint">GitHub username</string>
 </resources>

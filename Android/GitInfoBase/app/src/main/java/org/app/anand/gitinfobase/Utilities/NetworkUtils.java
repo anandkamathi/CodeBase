@@ -10,6 +10,7 @@ import android.net.NetworkInfo;
 
 public class NetworkUtils {
 
+    //Method for determining if data connection is available or not at given time
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

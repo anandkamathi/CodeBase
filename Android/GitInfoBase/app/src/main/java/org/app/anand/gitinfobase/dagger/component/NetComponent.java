@@ -17,6 +17,7 @@ import retrofit2.Retrofit;
  * Created by anand on 3/18/17.
  */
 
+//NetComponent provides Retrofit singleton object for Restful API consumption
 @Singleton
 @Component(modules = {AppModule.class, NetModule.class})
 public interface NetComponent {

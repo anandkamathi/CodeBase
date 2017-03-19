@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.app.anand.gitinfobase.Application.GitInfoApplication;
@@ -43,6 +44,7 @@ public class HomeActivity extends BaseActivity implements HomeView{
     private UserPresenter userPresenter;
     @Bind(R.id.userSrch) SearchView userSearch;
     @Bind(R.id.user_grid) RecyclerView usersList;
+    @Bind(R.id.title) TextView titleTxt;
 
     @Override
     protected void onViewReady(Bundle savedInstanceState, Intent intent) {
@@ -60,10 +62,11 @@ public class HomeActivity extends BaseActivity implements HomeView{
     }
 
     private void initializeFollowersList() {
-
+        String hint = "GitHub username";
         userPresenter = new UserPresenter(this);
 
 
+        userSearch.setQueryHint(hint);
         userSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

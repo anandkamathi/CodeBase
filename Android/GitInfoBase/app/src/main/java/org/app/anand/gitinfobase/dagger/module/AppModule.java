@@ -10,7 +10,7 @@ import dagger.Provides;
 /**
  * Created by anand on 3/18/17.
  */
-
+//AppModule provides Application singleton object and associated with NetComponent
 @Module
 public class AppModule {
     Application mApplication;

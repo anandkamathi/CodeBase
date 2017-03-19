@@ -17,31 +17,11 @@ import rx.Observable;
  */
 
 public interface GitApiService {
-
-    String BASE_URL="https://api.github.com";
-
+    //Restful API Endpoints
     @GET("/users/{username}/followers")
     Call<List<User>> getFollowers(@Path("username") String uname);
 
     @GET("/users/{username}")
     Observable<User> getUserDetails(@Path("username") String uname);
 
-    class GitFactory{
-        private static GitApiService gitApi;
-
-        public static GitApiService getInstance(){
-            if (gitApi == null){
-                Retrofit retrofit = new Retrofit.Builder()
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .baseUrl(BASE_URL)
-                        .build();
-
-                gitApi = retrofit.create(GitApiService.class);
-                return gitApi;
-            }else {
-                return gitApi;
-            }
-
-        }
-    }
 }
