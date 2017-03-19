@@ -3,13 +3,12 @@ package org.app.anand.gitinfobase.base;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
-import org.app.anand.gitinfobase.Application.GitInfoApplication;
+import org.app.anand.gitinfobase.application.GitInfoApplication;
 import org.app.anand.gitinfobase.api.GitApiService;
 import org.app.anand.gitinfobase.dagger.component.NetComponent;
 

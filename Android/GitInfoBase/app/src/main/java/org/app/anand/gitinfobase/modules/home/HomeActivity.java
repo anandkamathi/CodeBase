@@ -10,27 +10,19 @@ import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.app.anand.gitinfobase.Application.GitInfoApplication;
 import org.app.anand.gitinfobase.R;
-import org.app.anand.gitinfobase.Utilities.NetworkUtils;
-import org.app.anand.gitinfobase.api.GitApiService;
+import org.app.anand.gitinfobase.utilities.NetworkUtils;
 import org.app.anand.gitinfobase.base.BaseActivity;
 
-import org.app.anand.gitinfobase.dagger.component.NetComponent;
 import org.app.anand.gitinfobase.mvp.presenter.UserPresenter;
 import org.app.anand.gitinfobase.mvp.model.User;
 import org.app.anand.gitinfobase.mvp.model.adapter.UserAdapter;
 import org.app.anand.gitinfobase.mvp.view.HomeView;
 
 import java.util.List;
-import java.util.Observable;
-
-import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Retrofit;
 
 /**
  * Created by anand on 2/20/17.

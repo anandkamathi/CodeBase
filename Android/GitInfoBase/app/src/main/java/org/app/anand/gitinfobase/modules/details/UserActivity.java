@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-
 import org.app.anand.gitinfobase.R;
-import org.app.anand.gitinfobase.Utilities.NetworkUtils;
+import org.app.anand.gitinfobase.utilities.NetworkUtils;
 import org.app.anand.gitinfobase.base.BaseActivity;
 import org.app.anand.gitinfobase.handler.imagehandler.ImageLoader;
 import org.app.anand.gitinfobase.mvp.model.User;
